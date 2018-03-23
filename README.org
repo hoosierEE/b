@@ -1,0 +1,18 @@
+* b
+  I want to understand what's going on over at kparc.com/b.
+  Based on the docs, it appears to be full source code for a compiler for a C-like language.
+  The compiler is implemented in Whitney-style C, an acquired taste.
+
+  The readme claims that the generated code is on par with gcc/llvm at highest optimization settings, but with massively shorter compile times, and smaller binaries.
+
+* make
+  No ~k.c~ on my machine, so I will just try to ~make /bin/b~.
+
+  - macos: lots of "function definition is not allowed here" errors.  Seems to have missed a macro somewhere (thinks ~R~ is a function definition but it's really a macro).
+  - Ubuntu 16.04: builds ~b.c~ with some warnings
+
+* b program
+  - accepts ~*.b~ programs from the command line
+  - does not permit spaces (repl exits)
+  - no error handling (segfault)
+
