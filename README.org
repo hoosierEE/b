@@ -1,17 +1,31 @@
+> note: [[./docs.txt][docs.txt]] is kparc.com/b/readme.txt, renamed so GitHub shows this page first instead.
+
 * b
   I want to understand what's going on over at kparc.com/b.
-  Based on the docs, it appears to be full source code for a compiler for a C-like language.
-  The compiler is implemented in Whitney-style C, an acquired taste.
+  The docs call it a compiler, but it looks like an interpreter to me.
+  At the very least I can see a REPL in the "main" function[1].
+  It is implemented in Whitney-style C, an acquired taste.
 
   The readme claims that the generated code is on par with gcc/llvm at highest optimization settings, but with massively shorter compile times, and smaller binaries.
+
+  [1]: actually there's no ~main~, but there is a ~_start~ in assembly which invokes the REPL.
+
+* related work
+A couple others have started on this same journey.
+
+- https://github.com/tlack/b-decoded Has a README and some inline comments in the code.
+- https://github.com/zgrep/b
 
 * make/install
   No ~k.c~ on my machine, so I will only try to ~make /bin/b~.
 
-  - macos: lots of "function definition is not allowed here" errors.  Seems to have missed a macro somewhere (thinks ~R~ is a function definition but it's really a macro).
+  - MacOS: lots of "function definition is not allowed here" errors.  Seems to have missed a macro somewhere (thinks ~R~ is a function definition but it's really a macro).
   - Ubuntu 16.04 vm (VirtualBox): builds ~b.c~ with some warnings
 
 * the b executable
+  "Creature comforts" are absent, looks like a technical proof of concept or development version.
+  Don't expect training wheels.
+
   - accepts ~*.b~ programs from the command line
   - does not permit spaces (repl exits)
   - no error handling (segfault)
@@ -20,10 +34,12 @@
   - ~/~ and ~\~ do not seem to perform left or right shifts as hinted in the documentation (not sure what they do)
 
 * impresions
-Weird.
-Feels like C and K at the same time.
+  Weird.
+
+  Feels like C and K at the same time.  An "evolutionary missing link" between the two.
 
 * questions
-What is ~b~?
-Is it a compiler or a REPL (or both)?
+  - What is ~b~?
+  - Is it a compiler or a REPL (or both)?
+  - Why ~make /bin/b~ which requires ~sudo~?  More obvious workflow perhaps? (~/bin/~ is already on ~PATH~)
 
