@@ -5,6 +5,9 @@
 
   The readme claims that the generated code is on par with gcc/llvm at highest optimization settings, but with massively shorter compile times, and smaller binaries.
 
+* download latest
+  I used ~wget --recursive --no-parent http://kparc.com/b~ and then deleted a few spurious ~index.html?=~ files.
+
 * make/install
   No ~k.c~ on my machine, so I will only try to ~make /bin/b~.
 
@@ -20,10 +23,16 @@
   - ~/~ and ~\~ do not seem to perform left or right shifts as hinted in the documentation (not sure what they do)
 
 * impresions
-Weird.
-Feels like C and K at the same time.
+  Weird.
+  Feels like C and K at the same time.
 
 * questions
-What is ~b~?
-Is it a compiler or a REPL (or both)?
+  What is ~b~?
+  Is it a compiler or a REPL (or both)?
 
+* files
+  ~b.c~ includes ~a.h~ includes ~c.h~
+
+  - c.h:  typedefs, macros, accessors
+  - a.h:  more accessors, public interface (lots of static inlined functions)
+  - b.c:  entry point (~.start~ instead of ~main~ for some reason)
