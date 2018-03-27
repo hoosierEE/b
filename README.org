@@ -16,7 +16,9 @@
 * make/install
   No ~k.c~ on my machine, so I will only try to ~make /bin/b~.
 
-  - MacOS: lots of "function definition is not allowed here" errors.  Seems to have missed a macro somewhere (thinks ~R~ is a function definition but it's really a macro).
+  - MacOS: I failed to get a workin build.
+    Lots of "function definition is not allowed here" errors.
+    Seems to have missed a macro somewhere (thinks ~R~ is a function definition but it's really a macro).
   - Ubuntu 16.04 vm (VirtualBox): builds ~b.c~ with some warnings
 
 * overview of files
