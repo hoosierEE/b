@@ -1,4 +1,4 @@
-> note: [[./docs.txt][docs.txt]] is kparc.com/b/readme.txt, renamed so GitHub shows this page first instead.
+> note: [[ddocs.txt][docs/README.txt]] is from kparc.com/b/readme.txt
 
 * b
   I want to understand what's going on over at kparc.com/b.
